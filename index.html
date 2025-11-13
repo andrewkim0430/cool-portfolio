@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hakeon (Andrew) Kim — Portfolio</title>
+  <meta name="description" content="Portfolio of Hakeon (Andrew) Kim — Cloud & Infrastructure Developer from BCIT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- Animated gradient backdrop -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <header class="container nav">
+    <a class="brand" href="#home">
+      <img src="assets/icons/logo.svg" alt="Logo" width="28" height="28" />
+      <span>Hakeon (Andrew) Kim</span>
+    </a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button class="btn ghost" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+      <a class="btn primary" href="assets/Resume.pdf" download>Resume</a>
+    </nav>
+  </header>
+
+  <main id="home" class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1><span class="hi">Hi, I’m</span> <span class="name">Hakeon (Andrew) Kim</span></h1>
+        <p class="subtitle">I’m an IT professional specializing in <span class="highlight">cloud systems</span>, <span class="highlight">web apps</span>, and <span class="highlight">backend development</span>.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">See Projects</a>
+          <a class="btn ghost" href="#contact">Get in Touch</a>
+        </div>
+        <ul class="quick-facts">
+          <li>🚀 BCIT Computer Information Technology (CIT) Diploma Grad</li>
+          <li>🧠 Focus: Python, JavaScript, AWS, MySQL, Linux</li>
+          <li>🌎 Based in Burnaby, BC Canada</li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="card-3d tilt">
+          <img src="assets/images/hero-mock.svg" alt="App preview mockup">
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>Real projects with clear outcomes. Source code and demos included.</p>
+      </div>
+
+      <div class="grid projects">
+        <!-- Project 1: Dice Game -->
+        <article class="card project reveal">
+          <img src="assets/images/project-analytics.svg" alt="Dice Game preview">
+          <div class="card-body">
+            <h3>Dice Game Simulator</h3>
+            <p>Interactive web-based dice game built with JavaScript for BCIT’s COMP 2132 course. Implements randomization, DOM updates, and event-driven logic.</p>
+            <ul class="tags">
+              <li>JavaScript</li><li>HTML</li><li>CSS</li>
+            </ul>
+            <div class="actions">
+              <a class="btn small" href="2023DiceprojectCOMP2132-main/index.html" target="_blank" rel="noopener">Live Demo</a>
+            </div>
+          </div>
+        </article>
+        <!-- Project 2: OpenAI Chat Internship -->
+        <article class="card project reveal">
+          <img src="assets/images/project-ml.svg" alt="AI Chat preview">
+          <div class="card-body">
+            <h3>OpenAI Chat Learning App</h3>
+            <p>Developed during my Immersio internship — a blended language-learning AI chat platform integrating Python, Django, and OpenAI API for conversational support.</p>
+            <ul class="tags">
+              <li>Python</li><li>Django</li><li>OpenAI API</li><li>Kafka</li>
+            </ul>
+            <div class="actions">
+              <a class="btn small ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Loan Management System -->
+        <article class="card project reveal">
+          <img src="assets/images/project-ecommerce.svg" alt="Loan management dashboard">
+          <div class="card-body">
+            <h3>Loan Management System</h3>
+            <p>Built at Cypress Hills Partners using React, Refine, and NestJS. GraphQL API with PostgreSQL backend enabling CRUD operations for client data.</p>
+            <ul class="tags">
+              <li>React</li><li>NestJS</li><li>GraphQL</li><li>PostgreSQL</li>
+            </ul>
+            <div class="actions">
+              <a class="btn small ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <h2>Skills & Tools</h2>
+        <p>Technologies I use to deliver durable, scalable solutions.</p>
+      </div>
+      <ul class="chips">
+        <li>Python</li><li>JavaScript</li><li>HTML</li><li>CSS</li>
+        <li>Flask</li><li>Django</li><li>React</li><li>Node.js</li>
+        <li>SQL</li><li>MySQL</li><li>PostgreSQL</li>
+        <li>Linux</li><li>AWS</li><li>Docker</li>
+        <li>Git</li><li>Cloud Computing</li><li>Networking</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p>Want to collaborate or have a project in mind? Let’s talk.</p>
+      </div>
+      <form class="contact" onsubmit="return handleSubmit(event)">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+        <div class="field half">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="field half">
+          <label for="reason">Reason</label>
+          <select id="reason" name="reason">
+            <option>Project inquiry</option>
+            <option>Collaboration</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Send Message</button>
+          <span id="formStatus" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> Hakeon (Andrew) Kim — Built by own</p>
+    <div class="socials">
+      <a href="https://github.com/andrewkim0430" aria-label="GitHub"></a>
+      <a href="#" aria-label="LinkedIn"></a>
+      <a href="mailto:hakeon0417@gmail.com" aria-label="Email">✉</a>
+    </div>
+  </footer>
+</body>
+</html>
+
