@@ -221,3 +221,15 @@ body:not(.light) select optgroup {
   margin-right: 6px;
   vertical-align: middle;
 }
+
+.footer .socials img {
+  width: 26px;
+  height: 26px;
+  opacity: 0.75;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.footer .socials img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
