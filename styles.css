@@ -213,3 +213,11 @@ body:not(.light) select optgroup {
   background: #1e293b;      /* dark neutral */
   color: #e2e8f0;           /* light readable text */
 }
+
+.skill-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-right: 6px;
+  vertical-align: middle;
+}
