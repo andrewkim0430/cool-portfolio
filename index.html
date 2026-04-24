@@ -46,7 +46,7 @@
           <a class="btn ghost" href="#contact">Get in Touch</a>
         </div>
         <ul class="quick-facts">
-          <li>🚀 BCIT Computer Information Technology (CIT) Diploma Grad</li>
+          <li>🚀 Graduate of British Columbia Institute of Technology (BCIT) — Computer Information Technology (CIT) Diploma</li>
           <li>🧠 Focus: Python, JavaScript, Cloud (eg. AWS), MySQL, Linux</li>
           <li>🎯 Passionate about cloud automation, scripting, and infrastructure reliability</li>
           <li>🌎 Based in Burnaby, BC Canada</li>
@@ -63,43 +63,170 @@
     <section id="projects" class="section">
       <div class="section-header">
         <h2>Featured Projects</h2>
-        <p>Real projects with clear outcomes. Source code and demos included.</p>
+        <p>Real projects with structured detail — overview, tech stack, features, and what I learned.</p>
       </div>
 
-      <div class="grid projects">
+      <div class="project-list">
+
         <!-- Project 1: Dice Game -->
-        <article class="card project reveal">
-          <img src="assets/images/GettyImages-81896744_kfaikl.jpg" alt="Dice Game preview">
+        <article class="card project-entry reveal">
+          <div class="project-thumb">
+            <!-- TODO: Replace with an actual screenshot of the Dice Game -->
+            <img src="assets/images/GettyImages-81896744_kfaikl.jpg" alt="Dice Game Simulator screenshot">
+          </div>
 
           <div class="card-body">
-            <h3>Dice Game Simulator</h3>
+            <div class="project-header">
+              <div>
+                <h3>Dice Game Simulator</h3>
+                <p class="project-meta">📚 BCIT COMP 2132 — Academic Project</p>
+              </div>
+              <div class="actions">
+                <a class="btn small primary" href="2023DiceprojectCOMP2132-main/index.html" target="_blank" rel="noopener">Live Demo</a>
+                <a class="btn small ghost" href="https://github.com/andrewkim0430/2023DiceprojectCOMP2132" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
 
-            <p>Interactive web-based dice game built with JavaScript for BCIT’s COMP 2132 course. Implements randomization, DOM updates, and event-driven logic.</p>
+            <p class="project-overview">An interactive browser-based dice game built for BCIT's COMP 2132 course. Developed to apply core JavaScript concepts — DOM manipulation, event-driven logic, and real-time UI updates — in a hands-on project format.</p>
 
-            <ul class="tags">
-              <li>JavaScript</li>
-              <li>HTML</li>
-              <li>CSS</li>
+            <div class="tech-stack">
+              <div class="tech-row"><span class="tech-label">Frontend</span><span class="tech-val">JavaScript, HTML, CSS</span></div>
+              <div class="tech-row"><span class="tech-label">Tools</span><span class="tech-val">Git, VS Code</span></div>
+            </div>
+
+            <ul class="feature-list">
+              <li>Dice randomization with probability-based roll outcomes</li>
+              <li>Real-time DOM updates reflecting each roll without page reload</li>
+              <li>Score tracking and round management logic</li>
+              <li>Game reset and win condition detection</li>
             </ul>
 
-            <div class="actions">
+            <details class="project-details">
+              <summary>Problem Solving &amp; Lessons Learned</summary>
+              <div class="details-body">
+                <h4>Problem Solving</h4>
+                <p>The initial challenge was managing game state across multiple rolls without losing track of scores. I resolved this by centralizing state in a single JavaScript object and updating the UI from that source of truth — avoiding inconsistencies from scattered variable updates.</p>
+                <h4>Lessons Learned</h4>
+                <p>Gained a solid understanding of event-driven programming and how the DOM responds to state changes. Learned to separate game logic from display logic, making the code easier to debug and extend.</p>
+                <h4>Future Improvements</h4>
+                <ul>
+                  <li>Add multiplayer support with turn-based flow</li>
+                  <li>Animate dice rolls with CSS transitions</li>
+                  <li>Persist high scores using localStorage</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
 
-              <!-- Local demo (your folder) -->
-              <a class="btn small primary"
-                href="2023DiceprojectCOMP2132-main/index.html"
-                target="_blank" rel="noopener">
-                Live Demo
-              </a>
+        <!-- Project 2: OpenAI Chat Internship -->
+        <article class="card project-entry reveal">
+          <div class="project-thumb">
+            <img src="immy-chat/jrdfgbvnhg.png" alt="OpenAI Chat Learning App screenshot">
+          </div>
 
-
-              <!-- GitHub repo -->
-              <a class="btn small ghost"
-                href="https://github.com/andrewkim0430/2023DiceprojectCOMP2132"
-                target="_blank" rel="noopener">
-                GitHub
-              </a>
-
+          <div class="card-body">
+            <div class="project-header">
+              <div>
+                <h3>OpenAI Chat Learning App</h3>
+                <p class="project-meta">💼 Immersio — Internship Project</p>
+              </div>
+              <div class="actions">
+                <span class="badge-private">Private / NDA</span>
+              </div>
             </div>
+
+            <p class="project-overview">An AI-powered language-learning chat platform built during my internship at Immersio. Designed to provide real-time conversational coaching by integrating the OpenAI API with a Django backend and Kafka for asynchronous message processing.</p>
+
+            <div class="tech-stack">
+              <div class="tech-row"><span class="tech-label">Backend</span><span class="tech-val">Python, Django</span></div>
+              <div class="tech-row"><span class="tech-label">API</span><span class="tech-val">OpenAI API</span></div>
+              <div class="tech-row"><span class="tech-label">Messaging</span><span class="tech-val">Kafka</span></div>
+              <div class="tech-row"><span class="tech-label">Tools</span><span class="tech-val">Git, Postman</span></div>
+            </div>
+
+            <ul class="feature-list">
+              <li>OpenAI API integration for context-aware conversational responses</li>
+              <li>Kafka message queue for asynchronous, non-blocking chat flow</li>
+              <li>Django REST backend managing sessions and user context</li>
+              <li>Language-learning prompts tailored to learner level</li>
+            </ul>
+
+            <details class="project-details">
+              <summary>Problem Solving &amp; Lessons Learned</summary>
+              <div class="details-body">
+                <h4>Problem Solving</h4>
+                <p>Early on, synchronous API calls to OpenAI caused noticeable delays in the chat UI. The solution was to introduce Kafka to decouple the request and response cycle — the frontend sends a message and Kafka delivers the AI response asynchronously, keeping the UI responsive.</p>
+                <h4>Lessons Learned</h4>
+                <p>Learned how to integrate a third-party AI API into a production Django application, and how message queues solve real-time responsiveness issues in chat-based systems. Gained exposure to async architecture patterns used in real enterprise software.</p>
+                <h4>Future Improvements</h4>
+                <ul>
+                  <li>Add user progress tracking and vocabulary history</li>
+                  <li>Support multiple languages and proficiency levels</li>
+                  <li>Implement WebSocket for true real-time delivery</li>
+                </ul>
+                <h4>Screenshots</h4>
+                <div class="screenshot-gallery">
+                  <img src="immy-chat/jrdfgbvnhg.png" alt="Immy Chat — Chinese response">
+                  <img src="immy-chat/sdfsdv.png" alt="Immy Chat — English conversation">
+                  <img src="immy-chat/trdfghjy.png" alt="Immy Chat — Spanish response">
+                  <img src="immy-chat/hgftgfj.png" alt="Immy Chat — system architecture diagram">
+                </div>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <!-- Project 3: Loan Management System -->
+        <article class="card project-entry reveal">
+          <div class="project-thumb">
+            <!-- TODO: Replace with an actual screenshot of the Loan Management dashboard -->
+            <img src="assets/images/project-ecommerce.svg" alt="Loan Management System screenshot">
+          </div>
+
+          <div class="card-body">
+            <div class="project-header">
+              <div>
+                <h3>Loan Management System</h3>
+                <p class="project-meta">💼 Cypress Hills Partners — Internship Project</p>
+              </div>
+              <div class="actions">
+                <span class="badge-private">Private / NDA</span>
+              </div>
+            </div>
+
+            <p class="project-overview">A full-stack loan management dashboard developed during my internship at Cypress Hills Partners. Built to give staff a structured interface for managing client loan records — replacing manual tracking with a queryable, CRUD-enabled admin system.</p>
+
+            <div class="tech-stack">
+              <div class="tech-row"><span class="tech-label">Backend</span><span class="tech-val">NestJS</span></div>
+              <div class="tech-row"><span class="tech-label">Frontend</span><span class="tech-val">React, Refine</span></div>
+              <div class="tech-row"><span class="tech-label">Database</span><span class="tech-val">PostgreSQL</span></div>
+              <div class="tech-row"><span class="tech-label">API</span><span class="tech-val">GraphQL</span></div>
+              <div class="tech-row"><span class="tech-label">Tools</span><span class="tech-val">Git, Postman</span></div>
+            </div>
+
+            <ul class="feature-list">
+              <li>GraphQL API with full CRUD operations for client loan records</li>
+              <li>React + Refine admin UI with sortable, filterable data tables</li>
+              <li>PostgreSQL schema designed for financial record integrity</li>
+              <li>Role-aware views for different staff access levels</li>
+            </ul>
+
+            <details class="project-details">
+              <summary>Problem Solving &amp; Lessons Learned</summary>
+              <div class="details-body">
+                <h4>Problem Solving</h4>
+                <p>GraphQL and the Refine framework were both new to me at the start of this project. To get up to speed quickly, I built a small throwaway prototype first to understand how resolvers and the Refine data provider connected — then applied that understanding to the real system. This reduced integration errors significantly.</p>
+                <h4>Lessons Learned</h4>
+                <p>Learned how GraphQL differs from REST in terms of query flexibility, and how Refine abstracts common admin UI patterns (CRUD, pagination, filtering) so developers can focus on business logic. Also gained experience working with a typed NestJS + PostgreSQL backend in a real client environment.</p>
+                <h4>Future Improvements</h4>
+                <ul>
+                  <li>Add dashboard-level analytics (loan status summaries, overdue alerts)</li>
+                  <li>Export records to CSV/PDF for reporting</li>
+                  <li>Implement audit logging for all record changes</li>
+                </ul>
+              </div>
+            </details>
           </div>
         </article>
 
