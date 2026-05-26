@@ -177,7 +177,61 @@
           </div>
         </article>
 
-        <!-- Project 3: Loan Management System -->
+        <!-- Project 3: Suzette's Café Online Ordering Portal -->
+        <article class="card project-entry reveal">
+          <div class="project-thumb">
+            <img src="suzettescafe-online/images/KakaoTalk_20260303_114521031.jpg" alt="Suzette's Café Online Ordering Portal screenshot">
+          </div>
+
+          <div class="card-body">
+            <div class="project-header">
+              <div>
+                <h3>Suzette's Café — Online Ordering Portal</h3>
+                <p class="project-meta">🛠️ Personal Project</p>
+              </div>
+              <div class="actions">
+                <a class="btn small primary" href="suzettescafe-online/index.html" target="_blank" rel="noopener">Live Demo</a>
+                <a class="btn small ghost" href="https://github.com/andrewkim0430/suzettescafe-online" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+
+            <p class="project-overview">A full-stack online ordering portal built for a real café in Port Coquitlam, BC. Customers can browse the menu, add items to a cart, and place pickup orders online — complete with user authentication, tip and tax calculation, and order history.</p>
+
+            <div class="tech-stack">
+              <div class="tech-row"><span class="tech-label">Frontend</span><span class="tech-val">HTML, CSS, JavaScript (Vanilla)</span></div>
+              <div class="tech-row"><span class="tech-label">Backend</span><span class="tech-val">Python, Flask, Flask-CORS</span></div>
+              <div class="tech-row"><span class="tech-label">Database</span><span class="tech-val">MySQL</span></div>
+              <div class="tech-row"><span class="tech-label">Auth</span><span class="tech-val">JWT (PyJWT), pbkdf2_sha256</span></div>
+              <div class="tech-row"><span class="tech-label">Tools</span><span class="tech-val">Git, VS Code, Postman</span></div>
+            </div>
+
+            <ul class="feature-list">
+              <li>JWT-based signup, login, and session management</li>
+              <li>Category-based menu browsing and cart management</li>
+              <li>Automatic tip (percent or flat) and tax calculation on order creation</li>
+              <li>Order history page for logged-in users</li>
+              <li>Flask REST API with separate endpoints for menu, orders, and auth</li>
+            </ul>
+
+            <details class="project-details">
+              <summary>Challenges &amp; Takeaways</summary>
+              <div class="details-body">
+                <h4>Challenges</h4>
+                <p>The main hurdles were CORS configuration between the decoupled frontend and Flask backend, and handling JWT expiry gracefully on the client side. Resolved by configuring Flask-CORS and adding client-side token expiry detection that automatically signs the user out.</p>
+                <h4>Takeaways</h4>
+                <p>Building the full JWT authentication flow from scratch gave me a solid understanding of token-based auth. Translating real-world café business rules — tip modes, pickup-only ordering, tax rates — into data models strengthened my ability to turn requirements into working code.</p>
+                <h4>Future Improvements</h4>
+                <ul>
+                  <li>Stripe payment integration for online pre-payment</li>
+                  <li>Admin dashboard for real-time order management</li>
+                  <li>Dockerize the backend and deploy to a cloud provider</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <!-- Project 4: Loan Management System -->
         <article class="card project-entry reveal">
           <div class="project-thumb">
             <img src="cypress-hills/images.jpg" alt="Loan Management System screenshot">
